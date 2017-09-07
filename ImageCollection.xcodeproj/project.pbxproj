@@ -13,6 +13,7 @@
 		8309D0B21F60081200514CBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8309D0B01F60081200514CBB /* LaunchScreen.storyboard */; };
 		8309D0BA1F6008D200514CBB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309D0B91F6008D200514CBB /* CollectionViewController.swift */; };
 		8309D0BC1F6008E800514CBB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309D0BB1F6008E800514CBB /* CollectionViewCell.swift */; };
+		8313A60B1F61FCC500B50DF8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313A60A1F61FCC500B50DF8 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8309D0B31F60081200514CBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8309D0B91F6008D200514CBB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		8309D0BB1F6008E800514CBB /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		8313A60A1F61FCC500B50DF8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				8309D0B31F60081200514CBB /* Info.plist */,
 				8309D0B91F6008D200514CBB /* CollectionViewController.swift */,
 				8309D0BB1F6008E800514CBB /* CollectionViewCell.swift */,
+				8313A60A1F61FCC500B50DF8 /* DetailViewController.swift */,
 			);
 			path = ImageCollection;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				8309D0BA1F6008D200514CBB /* CollectionViewController.swift in Sources */,
 				8309D0A81F60081200514CBB /* AppDelegate.swift in Sources */,
 				8309D0BC1F6008E800514CBB /* CollectionViewCell.swift in Sources */,
+				8313A60B1F61FCC500B50DF8 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +320,7 @@
 				8309D0B81F60081200514CBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
