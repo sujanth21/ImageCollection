@@ -5,13 +5,9 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Avenir.ttc">
-            <string>Avenir-Book</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Collection View Controller-->
         <scene sceneID="QIa-g4-M7N">
@@ -48,7 +44,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="cellImage" destination="MTN-wy-8tc" id="uur-B0-3cD"/>
-                                    <segue destination="5q3-aa-ulo" kind="show" id="LUQ-9z-AD0"/>
+                                    <segue destination="bqd-wO-huL" kind="show" identifier="Detail" id="Je1-pb-zZE"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -64,31 +60,34 @@
             <point key="canvasLocation" x="484" y="151.57421289355324"/>
         </scene>
         <!--Detail View Controller-->
-        <scene sceneID="hAC-6v-6Av">
+        <scene sceneID="2hA-37-GVe">
             <objects>
-                <viewController id="5q3-aa-ulo" customClass="DetailViewController" customModule="ImageCollection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bqd-wO-huL" customClass="DetailViewController" customModule="ImageCollection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DBM-in-RRi"/>
-                        <viewControllerLayoutGuide type="bottom" id="2tc-Rd-zKn"/>
+                        <viewControllerLayoutGuide type="top" id="AO7-Zy-kmz"/>
+                        <viewControllerLayoutGuide type="bottom" id="R7n-oZ-9ZM"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="B3o-hc-Yia">
+                    <view key="view" contentMode="scaleToFill" id="pQY-Ki-DYd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mrb-dE-ICg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image1" translatesAutoresizingMaskIntoConstraints="NO" id="m8H-uY-wMH">
                                 <rect key="frame" x="0.0" y="64" width="375" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="9BN-8W-FvV"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFT-yx-pSz">
-                                <rect key="frame" x="0.0" y="318" width="49" height="27.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nh-BC-YfR">
+                                <rect key="frame" x="16" y="322" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="pHI-BQ-h73"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MuH-et-t7r">
-                                <rect key="frame" x="0.0" y="370" width="375" height="277"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pCR-rW-tS0">
+                                <rect key="frame" x="16" y="375" width="343" height="282"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -96,11 +95,29 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Nh-BC-YfR" firstAttribute="leading" secondItem="pQY-Ki-DYd" secondAttribute="leadingMargin" id="3GG-Ob-Cc7"/>
+                            <constraint firstItem="1Nh-BC-YfR" firstAttribute="top" secondItem="m8H-uY-wMH" secondAttribute="bottom" constant="8" id="BpZ-bb-ZtL"/>
+                            <constraint firstAttribute="bottom" secondItem="pCR-rW-tS0" secondAttribute="bottom" constant="10" id="Gaa-kK-tHn"/>
+                            <constraint firstItem="pCR-rW-tS0" firstAttribute="leading" secondItem="pQY-Ki-DYd" secondAttribute="leadingMargin" id="Ox6-41-9dZ"/>
+                            <constraint firstItem="m8H-uY-wMH" firstAttribute="top" secondItem="pQY-Ki-DYd" secondAttribute="top" constant="64" id="RLQ-GQ-gH9"/>
+                            <constraint firstItem="pCR-rW-tS0" firstAttribute="top" secondItem="1Nh-BC-YfR" secondAttribute="bottom" constant="8" id="RmM-Xl-UK8"/>
+                            <constraint firstItem="pCR-rW-tS0" firstAttribute="top" secondItem="1Nh-BC-YfR" secondAttribute="bottom" constant="8" id="Ytj-VQ-gra"/>
+                            <constraint firstItem="1Nh-BC-YfR" firstAttribute="trailing" secondItem="pQY-Ki-DYd" secondAttribute="trailingMargin" id="djQ-ce-Wnd"/>
+                            <constraint firstItem="pCR-rW-tS0" firstAttribute="trailing" secondItem="pQY-Ki-DYd" secondAttribute="trailingMargin" id="glv-Ys-IXA"/>
+                            <constraint firstAttribute="trailing" secondItem="m8H-uY-wMH" secondAttribute="trailing" id="i4z-4f-pIq"/>
+                            <constraint firstItem="m8H-uY-wMH" firstAttribute="leading" secondItem="pQY-Ki-DYd" secondAttribute="leading" id="uKL-qM-swW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="m8H-uY-wMH" id="hej-yw-VaT"/>
+                        <outlet property="label" destination="1Nh-BC-YfR" id="zlu-M2-Vny"/>
+                        <outlet property="textView" destination="pCR-rW-tS0" id="fk7-oh-MRw"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MD5-0g-hOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hx-2v-zBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197.5999999999999" y="151.57421289355324"/>
+            <point key="canvasLocation" x="1194.4000000000001" y="150.67466266866569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Po1-oK-NVJ">

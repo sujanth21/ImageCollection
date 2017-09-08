@@ -10,16 +10,16 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImage!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textView: UITextView!
     
     var cellData: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        imageView.image = UIImage(named: cellData)
     }
 
     override func didReceiveMemoryWarning() {
